@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You, My Love ❤️</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { color: #333; }
+    textarea {
+      width: 80%;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>For You, My Love 💖</h1>
+  <p>Baby, answer these for me 😇</p>
+
+  <textarea id="q1" rows="2" placeholder="1. What do you want these days?"></textarea><br>
+  <textarea id="q2" rows="2" placeholder="2. What surprises make you happy?"></textarea><br>
+  <textarea id="q3" rows="2" placeholder="3. Dream gift you want?"></textarea><br>
+  <textarea id="q4" rows="2" placeholder="4. Any secret wish for me? 😉"></textarea><br>
+
+  <a id="whatsappLink" class="whatsapp-button" href="#" target="_blank">Send on WhatsApp 💬</a>
+
+  <script>
+    const whatsappButton = document.getElementById('whatsappLink');
+    whatsappButton.onclick = function() {
+      const q1 = document.getElementById('q1').value;
+      const q2 = document.getElementById('q2').value;
+      const q3 = document.getElementById('q3').value;
+      const q4 = document.getElementById('q4').value;
+      const message = `Hey baby ❤️, here are my answers:
+1️⃣ ${q1}
+2️⃣ ${q2}
+3️⃣ ${q3}
+4️⃣ ${q4}
+Love you ❤️`;
+
+      const phoneNumber = "919016087171"; // PUT YOUR WHATSAPP NUMBER HERE (with country code, no + sign)
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      whatsappButton.href = url;
+    };
+  </script>
+
+</body>
+</html>
